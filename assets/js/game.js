@@ -6,15 +6,26 @@ var respect = $("#respect");
 var responsibility = $("#responsibility");
 var fairness = $("#fairness");
 var courage = $("#courage");
-var scenario = $("#context"); // scenario context
+var scenario = $("#scenario"); // scenario context
+var timer = $("#timer");
+var life = $("#life");
+var start = $("#start");
 
 // declare scenarios
 var scenarios = ["honesty", "trust", "respect", "responsibility", 
 					"fairness", "courage"];
+var buttons = [honesty, trust, respect, responsibility, fairness, courage];
 
 // Global Vars
 var scenarioIndex; // current scenario number 
 var numVars = 6;
+var time = 0;
+var record = null;
+var totalPlay = 0;
+var played = [];
+var stop = false;
+var started = false;
+var numLife = 3;
 
 // get random number
 function getRandom(max) {
@@ -23,12 +34,94 @@ function getRandom(max) {
 
 //get random scenarios
 function setScenario() {
-	scenarioIndex = getRandom(numVars);
+
+	while (true) {
+		
+		scenarioIndex = getRandom(numVars);
+		if (played.indexOf(scenarioIndex) == -1) {
+			break;
+		}
+	}
+	played.push(scenarioIndex);
 	scenario.text(scenarios[scenarioIndex]);
+	++totalPlay;
 }
 
+// setup timer
+function countTime() {
 
+	clearInterval(record);
 
+    record = setInterval(function() {
+
+    	// check if the game end
+    	if (stop) {
+        	clearInterval(record);
+            record = null;
+            started = false;
+        } else {
+        	// increase the time
+	    	++time;
+	        timer.text(time);    
+        }
+
+    }, 1000);
+}
+
+// initial the game contents and status
+function init() {
+
+	// set click listeners
+	for (var i = 0; i < numVars; ++i) {
+
+		buttons[i].click(function() {
+
+			if (!started) return;		
+
+			var buttonIndex = $(this).index();
+			if (buttonIndex == scenarioIndex) {
+
+				if (totalPlay == numVars) {
+					stop = true;
+				} else {
+					setScenario();
+				}
+			} else {
+				
+				--numLife;
+				if (numLife == 0) {
+					stop = true;
+				}
+				life.text(numLife);
+			}
+		});
+	}
+
+	// initial global variables
+	time = 0;
+	totalPlay = 0;
+	played = [];
+	stop = false;
+	started = true;
+	numLife = 3;
+
+	// set contents and start the timer
+	setScenario();
+	timer.text(time);
+	life.text(numLife);
+	countTime();
+}
+
+start.click(function() {
+
+	if (started) {
+		start.text("start");
+		stop = true;
+	} else {
+		start.text("Stop");
+		init();
+	}
+});
 
 
 

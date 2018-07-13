@@ -1,0 +1,63 @@
+html {
+    max-height: 100%;
+    width: 100%
+}
+
+body {
+
+    background: rgb(249,249,249);
+    color: black;
+    margin: 0px;
+    min-height: 100%;
+}
+
+#gameContents {
+	max-width: 500px;
+    height: 100%;
+    margin: 8% auto;
+    font-family: 'Lato', sans-serif;
+}
+
+#scenarioBox {
+	line-height: 150px;
+	height: 150px;
+	border: 2px solid black;
+	text-align: center;
+}
+
+#scenario {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.control {
+	padding: 0px;
+	margin-top: 10px;
+}
+
+#start {
+	padding: 0px;
+    border: 1px solid rgba(0,0,0, 0.2);
+    width: 100%;
+}
+
+.control h5{
+	width: 30%;
+	margin-left: 10%;
+	margin-right: 10%;
+	display: inline-block;
+	text-align: center;
+}
+
+.values {
+	padding: 0px;
+	margin-top: 10px;
+}
+.values button {
+	width: 45%;
+	margin-left: 2.25%;
+	margin-right: 2.25%;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+

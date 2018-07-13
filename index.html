@@ -18,19 +18,28 @@
 </head>
 <body>
 
-	<div class="container" id="scenario">
-		<h3 id="context">hello</h3>	
-	</div>
+	<div class="container" id="gameContents">
+		
+		<div class="container" id="scenarioBox">
+			<h3 id="scenario">hello</h3>
+		</div>
 
-	<div class="container values">
-		<button id="honesty">Honesty</button>
-		<button id="trust">Trust</button>
-		<button id="respect">Respect</button>
-		<button id="responsibility">Responsibility</button>
-		<button id="fairness">Fairness</button>
-		<button id="courage">Courage</button>
-	</div>
 
+		<div class="container control">
+			<h5>Life: <span id="life">3</span></h5><!--
+			--><h5>Time: <span id="timer">0</span></h5>
+			<button class="btn btn-light btn-sm" id="start">Start</button>
+		</div>
+
+		<div class="container values">
+			<button class="btn btn-warning" id="honesty">Honesty</button>
+			<button class="btn btn-warning" id="trust">Trust</button>
+			<button class="btn btn-warning" id="respect">Respect</button>
+			<button class="btn btn-warning" id="responsibility">Responsibility</button>
+			<button class="btn btn-warning" id="fairness">Fairness</button>
+			<button class="btn btn-warning" id="courage">Courage</button>
+		</div>
+	</div>
 
 <!-- Own JS -->
 <script type="text/javascript" src="assets/js/game.js"></script>
