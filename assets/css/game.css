@@ -22,6 +22,7 @@ body {
 	line-height: 150px;
 	height: 150px;
 	border: 2px solid black;
+	border-radius: 5px;
 	text-align: center;
 }
 
@@ -37,8 +38,13 @@ body {
 
 #start {
 	padding: 0px;
-    border: 1px solid rgba(0,0,0, 0.2);
-    width: 100%;
+	margin-left: 2.25%;
+	margin-right: 2.25%;
+	border: 1px solid black;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+    width: 95%;
+    height: 40px;
+    font-size: 
 }
 
 .control h5{
@@ -55,6 +61,7 @@ body {
 }
 .values button {
 	width: 45%;
+	height: 60px;
 	margin-left: 2.25%;
 	margin-right: 2.25%;
 	margin-top: 3px;
