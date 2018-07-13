@@ -83,6 +83,7 @@ function init() {
 
 				if (totalPlay == numVars) {
 					stop = true;
+					scenario.text("You Win!");
 				} else {
 					setScenario();
 				}
@@ -91,6 +92,7 @@ function init() {
 				--numLife;
 				if (numLife == 0) {
 					stop = true;
+					scenario.text("Try Again!");
 				}
 				life.text(numLife);
 			}
