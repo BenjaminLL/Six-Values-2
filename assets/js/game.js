@@ -122,7 +122,8 @@ function setListeners() {
 	start.click(function() {
 
 		if (started) {
-			start.text("start");
+			start.text("Start");
+			scenario.text("Six Values 2");
 			stop = true;
 		} else {
 			start.text("Stop");

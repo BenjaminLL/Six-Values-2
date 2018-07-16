@@ -23,18 +23,22 @@ body {
 	height: 200px;
 	border-radius: 5px;
 	text-align: center;
-	border: 1px solid rgb(252, 209, 53);
-	box-shadow: 0 4px 8px 0 rgba(252, 209, 53, 0.2), 0 6px 20px 0 rgba(252, 209, 53, 0.19);
+/*	border: 1px solid rgb(252, 209, 53);
+	box-shadow: 0 4px 8px 0 rgba(252, 209, 53, 0.2), 0 6px 20px 0 rgba(252, 209, 53, 0.19);*/
+	border: 1px solid black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #scenario {
     display: inline-block;
     vertical-align: middle;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .control {
 	padding: 0px;
-	margin-top: 10px;
+	margin-top: 20px;
+	font-family: 'Lato', sans-serif;
 }
 
 #start {
@@ -45,6 +49,9 @@ body {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
     width: 95%;
     height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 100%;
 }
 
 .control h5{
