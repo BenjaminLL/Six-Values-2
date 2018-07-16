@@ -71,34 +71,6 @@ function countTime() {
 // initial the game contents and status
 function init() {
 
-	// set click listeners
-	for (var i = 0; i < numVars; ++i) {
-
-		buttons[i].click(function() {
-
-			if (!started) return;		
-
-			var buttonIndex = $(this).index();
-			if (buttonIndex == scenarioIndex) {
-
-				if (totalPlay == numVars) {
-					stop = true;
-					scenario.text("You Win!");
-				} else {
-					setScenario();
-				}
-			} else {
-				
-				--numLife;
-				if (numLife == 0) {
-					stop = true;
-					scenario.text("Try Again!");
-				}
-				life.text(numLife);
-			}
-		});
-	}
-
 	// initial global variables
 	time = 0;
 	totalPlay = 0;
@@ -114,18 +86,54 @@ function init() {
 	countTime();
 }
 
-start.click(function() {
+function setListeners() {
+	for (var i = 0; i < numVars; ++i) {
 
-	if (started) {
-		start.text("start");
-		stop = true;
-	} else {
-		start.text("Stop");
-		init();
+		buttons[i].click(function() {
+
+			if (!started) return;		
+
+			var buttonIndex = $(this).index();
+			console.log("buttonIndex: " + buttonIndex);
+			console.log("scenarioIndex: " + scenarioIndex);
+			if (buttonIndex == scenarioIndex) {
+
+				if (totalPlay == numVars) {
+					stop = true;
+					scenario.text("You Win!");
+					start.text("Start");
+				} else {
+					setScenario();
+				}
+			} else {
+				
+				--numLife;
+				console.log(numLife);
+				if (numLife == 0) {
+					stop = true;
+					scenario.text("Try Again!");
+					start.text("Start");
+				}
+				life.text(numLife);
+			}
+		});
 	}
-});
+
+	start.click(function() {
+
+		if (started) {
+			start.text("start");
+			stop = true;
+		} else {
+			start.text("Stop");
+			init();
+		}
+	});
+}
 
 
+
+setListeners();
 
 
 

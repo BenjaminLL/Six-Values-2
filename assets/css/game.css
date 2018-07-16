@@ -19,12 +19,12 @@ body {
 }
 
 #scenarioBox {
-	line-height: 150px;
-	height: 150px;
+	line-height: 200px;
+	height: 200px;
 	border-radius: 5px;
 	text-align: center;
-	border: 1px solid rgba(0,0,0, 0.2);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid rgb(252, 209, 53);
+	box-shadow: 0 4px 8px 0 rgba(252, 209, 53, 0.2), 0 6px 20px 0 rgba(252, 209, 53, 0.19);
 }
 
 #scenario {
