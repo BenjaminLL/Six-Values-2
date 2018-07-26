@@ -19,20 +19,17 @@ body {
 }
 
 #scenarioBox {
-	line-height: 200px;
+/*	line-height: 200px;*/
 	height: 200px;
 	border-radius: 5px;
 	text-align: center;
-/*	border: 1px solid rgb(252, 209, 53);
-	box-shadow: 0 4px 8px 0 rgba(252, 209, 53, 0.2), 0 6px 20px 0 rgba(252, 209, 53, 0.19);*/
-	border: 1px solid black;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/*	border: 1px solid black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 #scenario {
-    display: inline-block;
-    vertical-align: middle;
-    font-family: 'Abril Fatface', cursive;
+    width: 100%;
+    height: 100%;
 }
 
 .control {
